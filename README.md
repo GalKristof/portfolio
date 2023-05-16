@@ -4,9 +4,9 @@
 
 # A projekt futtatása 3 lépésben lehetséges #
 
-1: Elsőkörben az `npm install` parancs lefuttatása, hogy a szükséges csomagok letöltődjenek. * - ezt elég csak a legelső indításkor lefuttatni.
-2: Másodjára, futtassuk a `ng serve` parancsot, hogy elinduljon az Angular szerver.
-3: A böngészőben nyissuk meg a `http://localhost:4200` oldalt.
+- 1: Elsőkörben az `npm install` parancs lefuttatása, hogy a szükséges csomagok letöltődjenek. * - ezt elég csak a legelső indításkor lefuttatni.
+- 2: Másodjára, futtassuk a `ng serve` parancsot, hogy elinduljon az Angular szerver.
+- 3: A böngészőben nyissuk meg a `http://localhost:4200` oldalt.
 
 Alternatív megoldás, hogy a kész projekt megtekinthető a `https://galkristof.eu` weboldalon.
 
@@ -60,7 +60,7 @@ Viszont ismerőseim lebeszéltek róla, mivel nem volt elég egyértelmű, hogy 
 A projekt létrehozása során törekedtem arra, hogy lehetőleg SVG-ket és WEBP fájlokat alkalmazzak annak érdekében, hogy az oldal gyorsan betöltődhessen és remek felhasználói élményt tudjak biztosítani.
 
 Ha szeretnének megkeresni, az alábbi elérhetőségeken megtalálnak:
-[LinkedIn]  `https://www.linkedin.com/in/kristofgal`
-[Facebook]  `https://www.facebook.com/kristof.gal.75`
-[Email]     `info@galkristof.eu`
-[Github]    `https://github.com/GalKristof`
+- [LinkedIn]  `https://www.linkedin.com/in/kristofgal`
+- [Facebook]  `https://www.facebook.com/kristof.gal.75`
+- [Email]     `info@galkristof.eu`
+- [Github]    `https://github.com/GalKristof`
