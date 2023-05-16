@@ -1,0 +1,11 @@
+<div class="d-flex align-items-center justify-content-around p-5 intro-container" id="intro">
+    <div class="d-flex justify-content-center flex-column p-4 intro-text">
+        <h4 class="mb-0">{{ data['myname'][lang] }}</h4>
+        <h1 class="text-uppercase extreme big text-center">{{ data['name'][lang] }}</h1>
+        <p>{{ data['whatAmI'][lang] }}</p>
+
+        <button class="mt-3 w-100 outline contact" (click)="goToContact();">{{ data['getInTouch'][lang] }}</button>
+
+    </div>
+    <img src="assets/images/myself.jpg" alt="Önmagamat ábrázoló fénykép">
+</div>

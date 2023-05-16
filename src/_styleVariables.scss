@@ -1,0 +1,36 @@
+@import '../node_modules/@angular/material/_theming';
+
+$font-title: "Poppins", sans-serif;
+$font-extreme: "Passion One", sans-serif;
+$font-regular: "Roboto", sans-serif;
+$font-handwritten: "Caveat", cursive;
+
+$main-color: #ff932e;
+$secondary-color: #222222;
+$background-color: #ffffff;
+$alternative-color: #22ddff;
+
+// breakpoints
+$bp-mobil: 576px;
+$bp-tablet: 768px;
+$bp-middle: 992px;
+$bp-laptop: 1200px;
+$bp-monitor: 1400px; 
+
+$my-theme: mat-light-theme((
+    color: (
+        primary: (
+            default: $secondary-color
+        ),
+        accent: (
+            default: $background-color
+        ),
+        warn: (
+            default: $main-color
+        ),
+    )
+));
+
+@include mat-core();
+
+@include angular-material-theme($my-theme);

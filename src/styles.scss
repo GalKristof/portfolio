@@ -1,0 +1,295 @@
+@import "_styleVariables.scss";
+
+// Meyer CSS Reset //
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// Meyer CSS Reset //
+
+// default settings //
+
+body{
+    transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+}
+
+body[data-theme="light"] {
+  background-color: $background-color;
+  color: $secondary-color;
+
+}
+
+body[data-theme="dark"] {
+	background-color: $secondary-color;
+	color: $background-color;
+	
+	button.outline{
+		background-color: transparent!important;
+		&:hover{
+		background-color: $main-color!important;
+		color: $secondary-color!important;
+		}
+	}
+	button:disabled{
+		background-color: rgba($background-color, .2);
+		border-color:rgba($background-color, .2);
+		font-style: italic;
+		cursor: not-allowed;
+	}
+}
+
+body, html{
+	background-color: $background-color;
+	color: $secondary-color;
+	font: 1rem $font-regular;
+	scroll-behavior: smooth;
+}
+
+app-root{
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.container-fluid{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: $font-title;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+a, a:link, a:visited, a:active, a:hover, p, label{
+	font-family: $font-regular;
+	margin-bottom: 0.5rem;
+	color: inherit;
+	transition: color .45s ease-in-out;
+}
+
+a{
+	color: $background-color!important;
+}
+
+a:hover{
+	text-decoration: none!important;
+	color: $main-color!important;
+	cursor: pointer;
+}
+
+h1{
+	font-size: 3.5rem;
+}
+
+h2{
+	font-size: 3rem;
+}
+
+h3{
+	font-size: 2.5rem;
+}
+
+h4{
+	font-size: 2rem;
+}
+
+h5, p, a{
+	font-size: 1.5rem;
+}
+
+h6{
+	font-size: 1rem;
+}
+
+.extreme{
+	font-family: $font-extreme;
+}
+
+.handwritten{
+	font-family: $font-handwritten;
+}
+
+.big{
+	font-size: 4rem;
+}
+
+button{
+	display: block;
+	padding: 0.5rem 1rem;
+	font: 1.3rem $font-title;
+	font-weight: bold;
+	line-height: 1.5;
+	border-radius: 0.4rem;	
+	border-color: $main-color;
+	background-color: $main-color;
+	color: $secondary-color;
+	cursor: pointer;
+	transition: background-color 200ms ease-in,
+				border-color 200ms ease-in,
+				color 200ms ease-in;
+	&:hover:not(:disabled), &:focus:not(:disabled){
+		background-color: $alternative-color;
+		border-color: $alternative-color;
+		outline: none;
+	}
+
+	&:disabled{
+		background-color: rgba($main-color, .2);
+		border-color:rgba($main-color, .2);
+		font-style: italic;
+		cursor: not-allowed;
+	}
+}
+
+button.outline{
+	background: $background-color;
+	color: $main-color;
+	&:hover, &:focus{
+		background-color: $main-color;
+		border-color: $main-color;
+		color: $background-color;
+		outline: none;
+	}
+}
+
+.form-control{
+	border-radius: 0;
+	border: 0;
+	border-bottom: 3px solid $main-color;
+	background-color: rgba($background-color, .2)!important;
+	color: $main-color!important;
+	&:focus{
+		box-shadow: none;
+		border-color: $main-color;
+	}
+
+	width: 250px;
+
+	@media(min-width: $bp-mobil)
+	{
+		width: 450px;
+	}
+}
+
+.text-border{
+	text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;
+}
+
+// default settings //
+
+
+@media(min-width: 992px)
+{
+	h1{
+		font-size: 4rem;
+	}
+	
+	h2{
+		font-size: 3.5rem;
+	}
+	
+	h3{
+		font-size: 3rem;
+	}
+	
+	.big{
+		font-size: 7rem;
+	}
+}
+
+
+.mdc-linear-progress__bar-inner{
+	border-top-width: 10px!important;
+	border-radius: 20px;
+	left: 0;
+}
+
+.mat-mdc-dialog-surface{
+	max-width: 800px!important;
+	padding: 2rem;
+	word-break: break-word;
+
+	.mdc-dialog__title{
+		color: $secondary-color!important;
+		font-size: 1.7rem!important;
+		line-height: 30px!important;
+		font-weight: bold!important;
+		font-family: "Poppins", sans-serif!important;
+		margin-bottom: 1rem!important;
+		padding: 0;
+	}
+
+	.mdc-dialog__content{
+		font-family: $font-regular, sans-serif!important;
+		line-height: 25px!important;
+		letter-spacing: unset!important;
+		font-weight: normal!important;
+		color: $secondary-color!important;
+		font-size: 1.4rem!important;
+		padding: 0!important;
+
+		span{
+			display: block;
+			margin-bottom: .5rem!important;
+		}
+
+		.tag{
+			padding-inline: .5rem;
+		}
+		img{
+			width: 50px;
+		}
+	}
+
+	.mdc-dialog__actions{
+		padding: 0!important;
+		margin-top: 1rem!important;
+	}
+}

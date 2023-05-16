@@ -1,0 +1,74 @@
+<div class="container-fluid" id="contact">
+    <div class="contact-row row">
+        <div class="col-lg-5 d-flex align-items-center">
+            <div class="contact-box">
+                <h2 class="text-center text-uppercase extreme mt-2">{{ data['contactForm'][lang]['title'] }}</h2>
+                <p *ngFor="let p of data['contactForm'][lang]['paragraphs']">{{ p }}</p>
+            </div>
+        </div>
+        <div class="col-lg-7 d-flex">
+            <form [formGroup]="contactForm" class="h-100 d-flex contact-form align-self-center px-5">
+                <div class="contact-form-inside">
+                    <div class="form-group">
+                        <label for="email" class="input-label">{{ data['contactForm'][lang]['mail'] }}</label>
+                        <input type="text" class="form-control" 
+                        formControlName="email" name="email" id="email"
+                        [class.border-danger]="(email!.invalid && email!.touched)"/>
+                        <mat-error class="text-danger mt-2 d-block" *ngIf="(email!.invalid && email!.touched)">
+                            <span *ngIf="email.hasError('required')">
+                                {{ data['contactForm'][lang]['mail'] }} {{ data['contactForm'][lang]['required'] }}</span>
+                            <span *ngIf="email.hasError('pattern')">
+                                {{ data['contactForm'][lang]['notValid'] }} {{ data['contactForm'][lang]['mail'] }} </span>
+                        </mat-error>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="name" class="input-label">{{ data['contactForm'][lang]['name'] }}</label>
+                        <input type="text" class="form-control" 
+                        formControlName="name" name="name" id="name"
+                        [class.border-danger]="(name!.invalid && name!.touched)"/>
+                        <mat-error class="text-danger mt-2 d-block" *ngIf="(name!.invalid && name!.touched)">
+                            <span *ngIf="name.hasError('required')">
+                                {{ data['contactForm'][lang]['name'] }} {{ data['contactForm'][lang]['required'] }}
+                            </span>
+                        </mat-error>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="message" class="input-label">{{ data['contactForm'][lang]['message'] }}</label>
+                        <textarea rows="10" type="message" class="form-control" 
+                        formControlName="message" name="message" id="message"
+                        [class.border-danger]="(message!.invalid && message!.touched)"></textarea>
+                        <mat-error class="text-danger mt-2 d-block" *ngIf="(message!.invalid && message!.touched)">
+                            <span *ngIf="message.hasError('required')">
+                                {{ data['contactForm'][lang]['message'] }} {{ data['contactForm'][lang]['required'] }}
+                            </span>
+                        </mat-error>
+                    </div>
+
+                    <ngx-recaptcha2 id="captcha" [siteKey]="captchaSiteKey" formControlName="recaptcha" class="w-100"></ngx-recaptcha2>
+        
+                    <button [disabled]="contactForm.invalid || formSent" class="submitAction w-100 mt-3" (click)="submitContactForm()" 
+                    [title]="contactForm.invalid || formSent ? data['contactForm'][lang]['sendDisabled'] : data['contactForm'][lang]['sendEnabled']">
+                        {{ data['contactForm'][lang]['send'] }}
+                    </button>
+        
+                    <div class="response-messages mt-3 d-flex justify-content-center">
+                        <div class="alert alert-danger w-75" *ngIf="formError">
+                            <p>{{ data['contactForm'][lang]['error'] }}</p>
+                            <p class="my-2">{{formError}}</p>
+                            <p>{{ data['contactForm'][lang]['informErrorUser'] }}</p>
+                        </div>
+                        
+                        <h5 class="sending-mail" *ngIf="formSent && !formArrived && !formError">{{ data['contactForm'][lang]['messagePending'] }}... <i class="fas fa-spinner fa-pulse"></i></h5>
+
+                        <div class="alert alert-success" *ngIf="formSent && formArrived">
+                            <p [innerHTML]="data['contactForm'][lang]['successMessage']"></p>
+                        </div>
+                    </div>
+        
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

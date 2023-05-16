@@ -1,0 +1,40 @@
+.intro-container{
+
+    max-width: 1200px;
+    margin-inline: auto;
+    flex-direction: column;
+
+    .developer{
+        font-size: 15rem;
+    }
+
+    button.contact{
+        max-width: 450px;
+
+        a{
+            font-family: inherit;
+            color: inherit;
+        }
+    }
+
+    .intro-text{
+        align-items: center;
+    }
+
+}
+
+img{
+    width: 300px;
+    border-radius: 40% 2%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: top;
+    border: 2px solid black;
+}
+
+@media(min-width: 992px)
+{
+    .intro-container{
+        flex-direction: row;
+    }
+}

@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-dark p-3" id="nav">
+    <div class="navbar-brand">
+        <h3 class="text-uppercase mb-0"> {{ data['name'][lang] }} </h3>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars-staggered navbar-toggler-bar" id="navbar-bar"></i>
+    </button>
+    <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+        <ul class="navbar-nav d-flex align-items-center">
+        <li class="nav-item">
+            <a href="#knowme" class="nav-link">{{ data['knowme'][lang] }}</a>
+        </li>
+        <li class="nav-item">
+            <a href="#references" class="nav-link">{{ data['reference'][lang]['title'] }}</a>
+        </li>
+        <li class="nav-item">
+            <a href="#contact" class="nav-link">{{ data['contact'][lang] }}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" (click)="changeLanguage()"><i class="fa fa-language fa-2x"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" (click)="changeTheme()">
+                <i class="fa" [class.fa-moon]="theme === 'light'" [class.fa-lightbulb]="theme === 'dark'"></i>
+            </a>              
+        </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="to-top" (click)="scrollToTop()" [ngClass]="{ 'show-scrollTop': windowScrolled }">
+    <i class="fa fa-up-long fa-3x p-1 text-border"></i>
+</div>

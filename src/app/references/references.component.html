@@ -1,0 +1,10 @@
+<div class="container-fluid" id="references">
+    <h2 class="text-center">{{data['reference'][lang]['title']}}</h2>
+    <div class="row px-5">
+        <div class="reference col-xl-4 col-lg-6 py-5 px-2 d-flex flex-column justify-content-center align-items-center" *ngFor="let reference of referenceList;">
+            <img [src]="'assets/images/' + reference.imageName + '_resp.webp'" [alt]="reference[lang]['name'] + ' ' + data['reference'][lang]['imageAlt']"/>
+            <h4 class="text-center extreme mt-2">{{reference[lang]['name']}}</h4>
+            <button mat-button (click)="openModal(reference.id)">{{ data['reference'][lang]['details'] }}</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+@import "../../styleVariables";
+
+.know-me{
+
+    @media(min-width: $bp-mobil)
+    {
+        padding: 2rem;
+    }
+
+    .info-col{
+        margin-bottom: 3rem;
+        @media(min-width: $bp-mobil)
+        {
+            padding: 1.5rem;
+            margin-bottom: 0;
+        }
+    }
+        
+    .info-card{
+        width: 100%;
+        max-width: 1200px;
+        height: 100%;
+        background-color: $main-color;
+        padding: 20px 10px;
+        color: #222222!important;
+        
+        @media(min-width: $bp-mobil)
+        {
+            box-shadow: 7px 10px 2px 2px rgba(0,0,0,0.71);
+            -webkit-box-shadow: 7px 10px 2px 2px rgba(0,0,0,0.71);
+            -moz-box-shadow: 7px 10px 2px 2px rgba(0,0,0,0.71);
+            border-radius: 5px;
+        }
+
+        .list-divider{
+            height: 3px;
+            width: 60%;
+            margin-inline: auto;
+            background-color: rgba(0,0,0,0.71);
+            margin-bottom: 1rem; 
+        }
+
+        img{
+            width: 275px;
+            height: 250px;
+            object-position: top;
+            object-fit: cover;
+            margin-bottom: .5rem;
+        }
+
+        transition: background-color .25s ease-in,
+                    transform .3s ease-in-out;
+        &:not(.skills):hover, &:not(.skills):active, &:not(.skills):focus{
+            background-color: $alternative-color;
+            transform:  scale(105%);
+            z-index: 10;
+        }
+    }
+
+    .skill-block{
+        text-align: center;
+        position: relative;
+        h4{
+            margin: 0;
+        }
+
+        mat-progress-bar{
+            height: 10px;
+            border-radius: 20px;
+        }
+        
+    }
+}

@@ -1,0 +1,42 @@
+@import '../../styleVariables';
+
+.contact-row{
+
+    .col-lg-5{
+        justify-content: center;
+        color: $main-color!important;
+        
+        @media(min-width: $bp-middle)
+        {
+            color: $secondary-color!important;
+            justify-content: end;
+        }
+    }
+    
+    .col-lg-7{
+        margin-top: 1rem;
+        justify-content: center;
+        
+        @media(min-width: $bp-middle)
+        {
+            margin-top: 0;
+            justify-content: start;
+            padding-left: 1.5rem;
+        }
+    }
+
+    .contact-box{
+        padding: .25rem 2rem;
+        text-align: center;
+        
+        @media(min-width: $bp-middle)
+        {
+            transform: rotate(-3deg);
+            background-color: $main-color;
+        }
+    }
+}
+
+p{
+    word-break: break-word;
+}
