@@ -31,6 +31,7 @@ export class ContactComponent {
   email: AbstractControl<any, any> = this.contactForm.controls['email'];
   name: AbstractControl<any, any> = this.contactForm.controls['name'];
   message: AbstractControl<any, any> = this.contactForm.controls['message'];
+  recaptcha: AbstractControl<any, any> = this.contactForm.controls['recaptcha'];
 
   formSent: boolean = false;
   formArrived: boolean = false;
@@ -52,7 +53,13 @@ export class ContactComponent {
 
   async submitContactForm()
   {
+    Object.keys(this.contactForm.controls).forEach(x => {
+      this.contactForm.get(x)?.markAsTouched();
+    })
+
     this.resetResponseMessages();
+
+    if(this.contactForm.invalid) return;
 
     const args = {
       from_email: this.email.value,
@@ -74,6 +81,6 @@ export class ContactComponent {
         this.formSent = false;
       }
     }
-
   }
+
 }

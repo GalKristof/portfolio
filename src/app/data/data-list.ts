@@ -152,8 +152,20 @@ export const data = {
             sendDisabled: "The form is invalid or has been sent already.",
             sendEnabled: "Click here to send it!",
         },
-
-        
+    },
+    language: {
+        hu: "Nyelv",
+        en: "Language",
+    },
+    theme: {
+        hu: {
+            light: "Több fényt",
+            dark: "Legyen este",
+        },
+        en: {
+            light: "Make light",
+            dark: "Go dark"
+        },
     }
 
 

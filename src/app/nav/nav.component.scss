@@ -3,7 +3,7 @@
 nav{
     background-color: $main-color;
 
-    h3{
+    h4{
         color: $secondary-color!important;
     }
 
@@ -20,8 +20,20 @@ nav{
     }
 
     .nav-item, .nav-link{
-        margin-inline: .3rem;
+        margin-inline: .4rem;
         padding: 0;
+    }
+
+    #toggler{
+        transition: transform .3s ease-in-out;
+        cursor: pointer;
+        font-size: 2rem;
+        color: $secondary-color;
+    }
+
+    // rotate effect
+    .rotate{
+        transform: rotate(90deg);
     }
 }
 
@@ -41,3 +53,4 @@ nav{
     opacity: 1 !important;
     transition: opacity 1s ease-in-out;
 }
+

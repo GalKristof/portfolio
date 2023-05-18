@@ -66,4 +66,19 @@ export class NavComponent {
       this.languageService.language.next('hu');
     }
   }
+
+  toggleRotate()
+  {
+    const toggler = document.getElementById("toggler");
+    if(!toggler) return;
+
+    if(toggler.classList.contains("rotate")) return toggler.classList.remove("rotate");
+    return toggler.classList.add("rotate");
+  }
+
+  oppositeTheme()
+  {
+    if(this.theme === "dark") return "light";
+    return "dark";
+  }
 }

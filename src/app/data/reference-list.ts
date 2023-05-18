@@ -30,11 +30,11 @@ export const referenceList: Reference[] = [
     {
         id: 2,
         hu: {
-            name: "Minden Ami Takarítás",
+            name: "Minden Ami Takarítás Kft.",
             desc: "A Minden Ami Takarítás Kft. weboldalának elkészítése volt az első komolyabb projektem, még 2021-ben. Örültem, hogy megkerestek, mert akkor kezdtem mélyebben belemerülni a webfejlesztésbe, és így az alapokat egyből tudtam alkalmazni valós környezetben.",
         },
         en: {
-            name: "Minden Ami Takarítás",
+            name: "Minden Ami Takaritas Kft.",
             desc: "Back in 2021, creating the Minden Ami Takarítás Kft.'s website was my first serious project. I was glad that they contacted me because that's when I started to dive deeper into web development, and then I could immediately apply all of the basics that I've learnt - but in a real environment.",
         },
         url: "https://mindenamitakaritas.hu/",

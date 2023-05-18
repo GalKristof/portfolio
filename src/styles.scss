@@ -174,7 +174,7 @@ button{
 	transition: background-color 200ms ease-in,
 				border-color 200ms ease-in,
 				color 200ms ease-in;
-	&:hover:not(:disabled), &:focus:not(:disabled){
+	&:hover:not(:disabled):not(.disabled){
 		background-color: $alternative-color;
 		border-color: $alternative-color;
 		outline: none;
@@ -188,10 +188,17 @@ button{
 	}
 }
 
+button.disabled{
+	background-color: rgba($main-color, .2);
+	border-color:rgba($main-color, .2);
+	font-style: italic;
+	cursor: not-allowed;
+}
+
 button.outline{
 	background: $background-color;
 	color: $main-color;
-	&:hover, &:focus{
+	&:hover{
 		background-color: $main-color;
 		border-color: $main-color;
 		color: $background-color;
@@ -199,22 +206,26 @@ button.outline{
 	}
 }
 
-.form-control{
-	border-radius: 0;
-	border: 0;
-	border-bottom: 3px solid $main-color;
-	background-color: rgba($background-color, .2)!important;
-	color: $main-color!important;
-	&:focus{
-		box-shadow: none;
-		border-color: $main-color;
-	}
+.form-group{
+	margin-top: 1rem;
 
-	width: 250px;
-
-	@media(min-width: $bp-mobil)
-	{
-		width: 450px;
+	.form-control{
+		border-radius: 0;
+		border: 0;
+		border-bottom: 3px solid $main-color;
+		background-color: rgba($background-color, .2)!important;
+		color: $main-color!important;
+		&:focus{
+			box-shadow: none;
+			border-color: $main-color;
+		}
+	
+		width: 100%;
+	
+		@media(min-width: $bp-mobil)
+		{
+			width: 450px;
+		}
 	}
 }
 
@@ -228,19 +239,15 @@ button.outline{
 @media(min-width: 992px)
 {
 	h1{
-		font-size: 4rem;
+		font-size: 7rem;
 	}
 	
 	h2{
-		font-size: 3.5rem;
+		font-size: 5.5rem;
 	}
 	
 	h3{
-		font-size: 3rem;
-	}
-	
-	.big{
-		font-size: 7rem;
+		font-size: 4.5rem;
 	}
 }
 

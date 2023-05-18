@@ -1,12 +1,12 @@
 <div class="know-me d-flex justify-content-center flex-column" id="knowme">
-    <h1 class="ml-2">{{ data['knowme'][lang] }}!</h1>
+    <h2 class="ml-2">{{ data['knowme'][lang] }}!</h2>
 
-    <h2 class="text-center">{{ data['aboutme'][lang] }}</h2>
+    <h3 class="text-center">{{ data['aboutme'][lang] }}</h3>
     <div class="row text-center">
         <div class="info-col col-xl-4">
             <div class="info-card">
                 <img src="assets/images/school.svg" [alt]="data['school'][lang]['imageAlt']"/>
-                <h3>{{ data['school'][lang]['title'] }}</h3>
+                <div class="data-subtitle">{{ data['school'][lang]['title'] }}</div>
                 <div class="list-divider"></div>
                 <p [innerHTML]="data['school'][lang]['desc']"></p>
             </div>
@@ -14,7 +14,7 @@
         <div class="info-col col-xl-4">
             <div class="info-card">
                 <img src="assets/images/language.svg" [alt]="data['languages'][lang]['imageAlt']"/>
-                <h3>{{ data['languages'][lang]['title'] }}</h3>
+                <div class="data-subtitle">{{ data['languages'][lang]['title'] }}</div>
                 <div class="list-divider"></div>
                 <p [innerHTML]="data['languages'][lang]['desc']"></p>
             </div>
@@ -22,13 +22,13 @@
         <div class="info-col col-xl-4">
             <div class="info-card">
                 <img src="assets/images/travel.svg" [alt]="data['travel'][lang]['imageAlt']"/>
-                <h3>{{ data['travel'][lang]['title'] }}</h3>
+                <div class="data-subtitle">{{ data['travel'][lang]['title'] }}</div>
                 <div class="list-divider"></div>
                 <p [innerHTML]="data['travel'][lang]['desc']"></p>
             </div>
         </div>
     </div>
-    <h2 class="text-center mt-2">{{ data['skills'][lang]['title'] }}</h2>
+    <h3 class="text-center mt-2">{{ data['skills'][lang]['title'] }}</h3>
     <div class="info-card mx-3 skills d-flex align-self-center flex-column">
         <img src="assets/images/coding.svg" [alt]="data['skills'][lang]['imageAlt']" class="d-block mx-auto"/>
         
