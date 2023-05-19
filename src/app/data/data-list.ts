@@ -154,8 +154,8 @@ export const data = {
         },
     },
     language: {
-        hu: "Nyelv",
-        en: "Language",
+        hu: "Angol",
+        en: "Hungarian",
     },
     theme: {
         hu: {
