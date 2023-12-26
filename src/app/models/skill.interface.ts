@@ -1,5 +1,5 @@
 export interface Skill {
-    name: string;
-    value: number;
+    img_url: string,
+    img_alt: string
 }
   

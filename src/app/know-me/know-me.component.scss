@@ -66,8 +66,26 @@
     .skill-block{
         text-align: center;
         position: relative;
-        h4{
+        
+        img.skill{
+            width: 175px;
+            height: 100%;
             margin: 0;
+            transition: .2s ease;
+
+            @media(max-width: 680px)
+            {
+                width: 140px;
+            }
+
+            @media(max-width: 380px)
+            {
+                width: 85px;
+            }
+
+            &:hover{
+                transform: scale(1.1);
+            }
         }
 
         mat-progress-bar{

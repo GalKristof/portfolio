@@ -29,17 +29,11 @@
         </div>
     </div>
     <h3 class="text-center mt-2">{{ data['skills'][lang]['title'] }}</h3>
-    <div class="info-card mx-3 skills d-flex align-self-center flex-column">
-        <img src="assets/images/coding.svg" [alt]="data['skills'][lang]['imageAlt']" class="d-block mx-auto"/>
-        
-        <div class="row d-flex align-items-center skill-block" *ngFor="let skill of skillList">
-            <div class="col-md-4">
-                <h4>{{skill.name}}</h4>
-            </div>
-            <div class="col-md-8">
-                <mat-progress-bar mode="determinate" [value]="skill.value"></mat-progress-bar>
+    <div class="info-card mx-3 skills d-flex align-self-center flex-column p-5">      
+        <div class="row d-flex align-items-center skill-block gy-5">
+            <div class="col-xl-2 col-lg-3 col-sm-4 col-6" *ngFor="let skill of skillList">
+                <img [src]="skill.img_url" [alt]="skill.img_alt" [title]="skill.img_alt" class="skill"/>
             </div>
         </div>
-        
     </div>
 </div>

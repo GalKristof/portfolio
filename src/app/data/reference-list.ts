@@ -1,18 +1,8 @@
 import { Reference } from '../models/reference.interface';
 
 export const referenceList: Reference[] = [
-    // {
-    //     id: 0,
-    //     name: "SzentEndre Gyógyszertár",
-    //     desc: "A SzentEndre Gyógyszertár egy 31 éve működő családi vállalkozás. Azzal a céllal kerestek meg, hogy a jelenlegi weboldaluk helyett szeretnének egy újat, ebben segítettem nekik.",
-    //     url: "https://szentendregyogyszertar.hu/",
-    //     techTags: ["angular", "html", "bootstrap", "typescript", "sass"],
-    //     year: 2023,
-    //     imageName: "gk",
-    //     githubLink: undefined,
-    // }, // pillanatnyilag készítés alatt áll
     {
-        id: 1,
+        id: 0,
         hu: {
             name: "Gál Kristóf",
             desc: "A saját portfólió oldalamat is úgy döntöttem, hogy besorolom ide, mivel ezen az oldalon is rengeteg technológiát alkalmaztam és bemutatja képességeimet.",
@@ -28,7 +18,7 @@ export const referenceList: Reference[] = [
         githubLink: "https://github.com/GalKristof/portfolio",
     },
     {
-        id: 2,
+        id: 1,
         hu: {
             name: "Minden Ami Takarítás Kft.",
             desc: "A Minden Ami Takarítás Kft. weboldalának elkészítése volt az első komolyabb projektem, még 2021-ben. Örültem, hogy megkerestek, mert akkor kezdtem mélyebben belemerülni a webfejlesztésbe, és így az alapokat egyből tudtam alkalmazni valós környezetben.",
@@ -44,7 +34,7 @@ export const referenceList: Reference[] = [
         githubLink: undefined,
     },
     {
-        id: 3,
+        id: 2,
         hu: {
             name: "Lagzi e-meghívó",
             desc: "A legelső weboldalaim egyike. Az ötletet a CodeBerry e-tanfolyama ihlette, elsősorban az animációkra helyeztem a hangsúlyt az oldalon.",

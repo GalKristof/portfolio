@@ -34,12 +34,16 @@ export const data = {
         en: "Hello, my name is"
     },
     whatAmI: {
-        hu: "Full-Stack webfejlesztő vagyok.",
-        en: "I am a Full-Stack web developer.",
+        hu: ".NET fejlesztő vagyok.",
+        en: "I am a .NET developer.",
     },
     getInTouch: {
         hu: "Kapcsolatfelvétel",
         en: "Get In Touch",
+    },
+    downloadCv: {
+        hu: "Önéletrajz megtekintése",
+        en: "Open CV",
     },
     aboutme: {
         hu: "Magamról",
@@ -60,12 +64,12 @@ export const data = {
     languages: {
         hu: { 
             title: "Nyelvek",
-            desc: "Szeretem a nyelveket. Jelenleg B2 szintű angol nyelvtudásom van, de tervben van a közeljövőben a német és spanyol nyelv elsajátítása is.",
+            desc: "Szeretem a nyelveket. Jelenleg B2 szintű angol nyelvtudásom van, de folyamatban van az orosz és a spanyol nyelv elsajátítása is.",
             imageAlt: "Mobiltelefon chat funkcióval, amely a nyelvtudást jelképezi",
         },
         en: { 
             title: "Languages",
-            desc: "I love languages. Besides my Hungarian knowledge, I have a B2 level of English, but it's in my near-future plan to learn how to speak German and Spanish as well.",
+            desc: "I love languages. Besides my Hungarian knowledge, I have a B2 level of English, but I have an ongoing learning path with Russian and Spanish.",
             imageAlt: "A mobile phone with a chat function, which represents the language knowledge",
         }
     },
@@ -83,20 +87,18 @@ export const data = {
     },
     skills: {
         hu: {
-            title: "Képességeim",
-            imageAlt: "Egy srác egy számítógép előtt, programozó világban",
+            title: "Képességeim"
         },
         en: { 
-            title: "My skills",
-            imageAlt: "A guy sitting in front of a computer, in the world of programming",
+            title: "Skills"
         }
     },
     whyMe: {
         hu: { 
             title: "Miért én?",
             paragraphs: [
-                "Azzal az előnnyel rendelkezem fiatal webfejlesztőként, hogy új ötleteket és perspektívákat tudok behozni egy-egy projektbe.",
-                "Mivel tisztában vagyok vele, hogy még rengeteg mindent kell megtanulnom, ezért ezzel telnek a mindennapjaim: az új technológiákat fedezem fel, így mindig naprakész tudok maradni.",
+                "Azzal az előnnyel rendelkezem fiatal fejlesztőként, hogy új ötleteket és perspektívákat tudok behozni egy-egy projektbe.",
+                "Mivel tisztában vagyok vele, hogy még rengeteg mindent kell megtanulnom, ezért ezzel telnek a szabad perceim: az új technológiákat fedezem fel, így mindig naprakész tudok maradni.",
                 "Mindig a legjobbra törekszem és a lehető legjobbat nyújtom önmagamból. Hiszem, hogy csak így érhetek el sikereket.",
                 "Keress meg, és érjük el ezeket a sikereket együtt!",
             ],
@@ -104,8 +106,8 @@ export const data = {
         en: {
             title: "Why me?",
             paragraphs: [
-                "I have that advantage as a young web developer, that I can bring new ideas and perspectives into projects.",
-                "Since that's clear to me, that I still have a lot to learn, this is exactly how I spend my days: discovering new technologies, so I can stay up-to-date.",
+                "I have that advantage as a young developer, that I can bring new ideas and perspectives into projects.",
+                "Since that's clear to me, that I still have a lot to learn, this is exactly how I spend my free minutes: discovering new technologies, so I can stay up-to-date.",
                 "I always strive for the best and give the best of myself. I truly believe that this is the only way to achieve success.",
                 "Find me, and achieve this success together!",
             ]

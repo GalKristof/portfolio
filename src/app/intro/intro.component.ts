@@ -23,4 +23,9 @@ export class IntroComponent {
   {
     location.href = "#contact";
   }
+
+  openCv()
+  {
+    window.open("https://galkristof.eu/KristofGal.pdf ");
+  }
 }
