@@ -57,7 +57,6 @@ body{
 body[data-theme="light"] {
   background-color: $background-color;
   color: $secondary-color;
-
 }
 
 body[data-theme="dark"] {
@@ -175,8 +174,8 @@ button{
 				border-color 200ms ease-in,
 				color 200ms ease-in;
 	&:hover:not(:disabled):not(.disabled){
-		background-color: $alternative-color;
-		border-color: $alternative-color;
+		background-color: $main-color;
+		border-color: $main-color;
 		outline: none;
 	}
 
