@@ -64,12 +64,12 @@ export const data = {
     languages: {
         hu: { 
             title: "Nyelvek",
-            desc: "Szeretem a nyelveket. Jelenleg B2 szintű angol nyelvtudásom van, de folyamatban van az orosz és a spanyol nyelv elsajátítása is.",
+            desc: "Szeretem a nyelveket. Jelenleg C1 szintű angol nyelvtudásom van, de folyamatban van az orosz nyelv elsajátítása is - már van alapszintű tudásom.",
             imageAlt: "Mobiltelefon chat funkcióval, amely a nyelvtudást jelképezi",
         },
         en: { 
             title: "Languages",
-            desc: "I love languages. Besides my Hungarian knowledge, I have a B2 level of English, but I have an ongoing learning path with Russian and Spanish.",
+            desc: "I love languages. Besides my Hungarian knowledge, I have a C1 level of English, but I have an ongoing learning path with Russian - so far I have elementary knowledge.",
             imageAlt: "A mobile phone with a chat function, which represents the language knowledge",
         }
     },
